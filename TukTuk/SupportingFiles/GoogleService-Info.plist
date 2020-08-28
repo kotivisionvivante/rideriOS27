@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>237744172142-8r9ho6mn6a40rg1buo6k65tc3hsa3t3t.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.237744172142-8r9ho6mn6a40rg1buo6k65tc3hsa3t3t</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>237744172142-325e13g2k04ohdgh764smjsgbs82ldnu.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAsT7IVMH_FFB4N1KSFM2cGY8gE0CXB62M</string>
+	<key>GCM_SENDER_ID</key>
+	<string>237744172142</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.visionvivante.tuktukdriver</string>
+	<key>PROJECT_ID</key>
+	<string>enjaz-taxi-1563135132593</string>
+	<key>STORAGE_BUCKET</key>
+	<string>enjaz-taxi-1563135132593.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:237744172142:ios:0202f49b35f8f6c463ca7f</string>
+	<key>DATABASE_URL</key>
+	<string>https://enjaz-taxi-1563135132593.firebaseio.com</string>
+</dict>
+</plist>

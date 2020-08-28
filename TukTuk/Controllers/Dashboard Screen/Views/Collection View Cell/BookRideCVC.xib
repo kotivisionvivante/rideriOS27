@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Bold.ttf">
+            <string>NunitoSans-Bold</string>
+        </array>
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="BookRideCVC" customModule="TukTuk" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cpu-Sv-SeH">
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="182"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="4 mins" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ILi-BG-jT1">
+                                <rect key="frame" x="2" y="2" width="146" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="15"/>
+                                <color key="textColor" name="TextGyarColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rs 105" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mq-d5-GtS">
+                                <rect key="frame" x="2" y="156.5" width="146" height="17.5"/>
+                                <fontDescription key="fontDescription" name="NunitoSans-Bold" family="Nunito Sans" pointSize="15"/>
+                                <color key="textColor" name="BlueNewColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UXT-Cw-8wH">
+                                <rect key="frame" x="37" y="21.5" width="76" height="76"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FreeRides_ICON" translatesAutoresizingMaskIntoConstraints="NO" id="wa0-tJ-LuB">
+                                        <rect key="frame" x="5" y="5" width="66" height="66"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="wa0-tJ-LuB" firstAttribute="top" secondItem="UXT-Cw-8wH" secondAttribute="top" constant="5" id="0uf-8g-Mvo"/>
+                                    <constraint firstAttribute="width" constant="76" id="YMl-Dm-weB"/>
+                                    <constraint firstAttribute="trailing" secondItem="wa0-tJ-LuB" secondAttribute="trailing" constant="5" id="czj-PA-MUl"/>
+                                    <constraint firstItem="wa0-tJ-LuB" firstAttribute="leading" secondItem="UXT-Cw-8wH" secondAttribute="leading" constant="5" id="lJt-sr-vjH"/>
+                                    <constraint firstAttribute="bottom" secondItem="wa0-tJ-LuB" secondAttribute="bottom" constant="5" id="uui-3l-RtU"/>
+                                    <constraint firstAttribute="height" constant="76" id="vgE-8c-rZl"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="38"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" name="UnderLineGrayColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uve-TI-8P7">
+                                <rect key="frame" x="10" y="99.5" width="130.5" height="55"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hatchback" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="bsv-H1-lPy">
+                                        <rect key="frame" x="2" y="16" width="97.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="20"/>
+                                        <color key="textColor" name="TextBlackColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="seats_small" translatesAutoresizingMaskIntoConstraints="NO" id="zcB-jx-OHT">
+                                        <rect key="frame" x="102.5" y="23" width="13" height="13"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="13" id="e7S-JL-22M"/>
+                                            <constraint firstAttribute="width" constant="13" id="jII-NN-8nI"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="gtY-Cv-KTC">
+                                        <rect key="frame" x="115.5" y="25" width="10" height="10"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="10" id="aSe-iZ-8Iv"/>
+                                            <constraint firstAttribute="width" constant="10" id="tMy-Ai-yyi"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="12"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="bsv-H1-lPy" firstAttribute="leading" secondItem="Uve-TI-8P7" secondAttribute="leading" constant="2" id="9Jz-lb-Wd8"/>
+                                    <constraint firstItem="gtY-Cv-KTC" firstAttribute="bottom" secondItem="zcB-jx-OHT" secondAttribute="bottom" constant="-1" id="KLc-5q-YIB"/>
+                                    <constraint firstItem="zcB-jx-OHT" firstAttribute="centerY" secondItem="bsv-H1-lPy" secondAttribute="centerY" constant="2" id="Kso-jF-K3l"/>
+                                    <constraint firstItem="zcB-jx-OHT" firstAttribute="leading" secondItem="bsv-H1-lPy" secondAttribute="trailing" constant="3" id="X6k-iz-X2W"/>
+                                    <constraint firstItem="gtY-Cv-KTC" firstAttribute="leading" secondItem="zcB-jx-OHT" secondAttribute="trailing" id="cbW-JM-3Cl"/>
+                                    <constraint firstItem="bsv-H1-lPy" firstAttribute="centerY" secondItem="Uve-TI-8P7" secondAttribute="centerY" id="iDR-KO-Zzg"/>
+                                    <constraint firstAttribute="trailing" secondItem="gtY-Cv-KTC" secondAttribute="trailing" constant="5" id="kkh-F5-zpY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Uve-TI-8P7" secondAttribute="trailing" constant="2" id="9UY-ig-LOv"/>
+                            <constraint firstItem="UXT-Cw-8wH" firstAttribute="top" secondItem="ILi-BG-jT1" secondAttribute="bottom" constant="2" id="ASk-pu-xO7"/>
+                            <constraint firstAttribute="bottom" secondItem="6Mq-d5-GtS" secondAttribute="bottom" constant="8" id="HtZ-mg-23J"/>
+                            <constraint firstItem="6Mq-d5-GtS" firstAttribute="centerX" secondItem="cpu-Sv-SeH" secondAttribute="centerX" id="NMH-XW-RKc"/>
+                            <constraint firstItem="Uve-TI-8P7" firstAttribute="centerX" secondItem="cpu-Sv-SeH" secondAttribute="centerX" id="OEA-Jh-6BG"/>
+                            <constraint firstItem="Uve-TI-8P7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cpu-Sv-SeH" secondAttribute="leading" constant="2" id="PLd-Sf-k6s"/>
+                            <constraint firstItem="6Mq-d5-GtS" firstAttribute="top" secondItem="Uve-TI-8P7" secondAttribute="bottom" constant="2" id="R5V-s4-YJQ"/>
+                            <constraint firstAttribute="trailing" secondItem="ILi-BG-jT1" secondAttribute="trailing" constant="2" id="U3B-tE-dx7"/>
+                            <constraint firstItem="Uve-TI-8P7" firstAttribute="top" secondItem="UXT-Cw-8wH" secondAttribute="bottom" constant="2" id="Yax-ae-1Gv"/>
+                            <constraint firstItem="ILi-BG-jT1" firstAttribute="top" secondItem="cpu-Sv-SeH" secondAttribute="top" constant="2" id="gjG-A1-ZTD"/>
+                            <constraint firstItem="ILi-BG-jT1" firstAttribute="centerX" secondItem="cpu-Sv-SeH" secondAttribute="centerX" id="hjQ-6j-WeZ"/>
+                            <constraint firstAttribute="trailing" secondItem="6Mq-d5-GtS" secondAttribute="trailing" constant="2" id="hkZ-oY-A06"/>
+                            <constraint firstItem="6Mq-d5-GtS" firstAttribute="leading" secondItem="cpu-Sv-SeH" secondAttribute="leading" constant="2" id="lDr-qd-2Da"/>
+                            <constraint firstItem="ILi-BG-jT1" firstAttribute="leading" secondItem="cpu-Sv-SeH" secondAttribute="leading" constant="2" id="uDO-to-TNz"/>
+                            <constraint firstItem="UXT-Cw-8wH" firstAttribute="centerX" secondItem="cpu-Sv-SeH" secondAttribute="centerX" id="y1U-1z-OXh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cpu-Sv-SeH" secondAttribute="trailing" id="65E-MT-Zc3"/>
+                <constraint firstItem="cpu-Sv-SeH" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="H9A-if-BVi"/>
+                <constraint firstAttribute="bottom" secondItem="cpu-Sv-SeH" secondAttribute="bottom" id="ee1-Lm-GJY"/>
+                <constraint firstItem="cpu-Sv-SeH" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="hxQ-v3-2RL"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="242" height="182"/>
+            <connections>
+                <outlet property="imageViewCar" destination="wa0-tJ-LuB" id="ewi-CS-HfI"/>
+                <outlet property="labelCapacity" destination="gtY-Cv-KTC" id="3eD-3Y-gVD"/>
+                <outlet property="labelCarType" destination="bsv-H1-lPy" id="3Zf-Jr-hKC"/>
+                <outlet property="labelDistance" destination="ILi-BG-jT1" id="znc-Yz-UIr"/>
+                <outlet property="labelPrice" destination="6Mq-d5-GtS" id="sBN-aA-6lb"/>
+                <outlet property="viewCircle" destination="UXT-Cw-8wH" id="9re-Li-kGZ"/>
+            </connections>
+            <point key="canvasLocation" x="-443.47826086956525" y="22.767857142857142"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="FreeRides_ICON" width="24" height="24"/>
+        <image name="seats_small" width="13" height="13"/>
+        <namedColor name="BlueNewColor">
+            <color red="0.16078431372549021" green="0.72549019607843135" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextBlackColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextGyarColor">
+            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="UnderLineGrayColor">
+            <color red="0.8666666666666667" green="0.8666666666666667" blue="0.8666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

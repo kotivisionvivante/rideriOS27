@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="lhs-hb-qUF">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="NunitoSans-Regular.ttf">
+            <string>NunitoSans-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Country Code View Controller-->
+        <scene sceneID="Cyo-Te-pjY">
+            <objects>
+                <viewController storyboardIdentifier="kCountryCodeView" id="MnU-8p-Enw" customClass="CountryCodeViewController" customModule="TukTuk" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kOC-YZ-ate">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar clipsSubviews="YES" contentMode="redraw" searchBarStyle="minimal" placeholder="Search Country" translatesAutoresizingMaskIntoConstraints="NO" id="yuw-cV-dRx">
+                                <rect key="frame" x="0.0" y="88" width="375" height="55"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="7he-vl-4t5"/>
+                                </constraints>
+                                <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardAppearance="alert" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="MnU-8p-Enw" id="uAN-lb-egl"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fpn-Og-70z">
+                                <rect key="frame" x="0.0" y="143" width="375" height="669"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CountryCodeCell" rowHeight="55" id="ItG-va-ROz" customClass="CountryCodeCell" customModule="TukTuk" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="55"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="redraw" tableViewCell="ItG-va-ROz" id="x6b-4F-15z">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="55"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nmv-eo-BP1">
+                                                    <rect key="frame" x="20" y="11.666666666666664" width="40" height="32"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="40" id="ilV-f7-0HA"/>
+                                                        <constraint firstAttribute="height" constant="32" id="tDC-Xz-ffq"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+855" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OrD-10-iHE">
+                                                    <rect key="frame" x="324.33333333333331" y="16.666666666666668" width="38.666666666666686" height="22.000000000000004"/>
+                                                    <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cambodia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UqR-Nw-NCM">
+                                                    <rect key="frame" x="68" y="15.333333333333334" width="81.666666666666686" height="24.666666666666664"/>
+                                                    <fontDescription key="fontDescription" name="NunitoSans-Regular" family="Nunito Sans" pointSize="18"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nmv-eo-BP1" firstAttribute="centerY" secondItem="x6b-4F-15z" secondAttribute="centerY" id="2gb-PT-pQG"/>
+                                                <constraint firstItem="UqR-Nw-NCM" firstAttribute="leading" secondItem="nmv-eo-BP1" secondAttribute="trailing" constant="8" id="IXi-mS-Hj0"/>
+                                                <constraint firstAttribute="trailing" secondItem="OrD-10-iHE" secondAttribute="trailing" constant="12" id="MeZ-rl-RkV"/>
+                                                <constraint firstItem="UqR-Nw-NCM" firstAttribute="centerY" secondItem="nmv-eo-BP1" secondAttribute="centerY" id="Qqi-ea-lYw"/>
+                                                <constraint firstItem="OrD-10-iHE" firstAttribute="centerY" secondItem="x6b-4F-15z" secondAttribute="centerY" id="dSS-lH-6Wd"/>
+                                                <constraint firstItem="nmv-eo-BP1" firstAttribute="leading" secondItem="x6b-4F-15z" secondAttribute="leading" constant="20" id="vxC-ot-2t8"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="countryCodeLbl" destination="OrD-10-iHE" id="tnk-vN-aBU"/>
+                                            <outlet property="countryImage" destination="nmv-eo-BP1" id="ScZ-Bg-8g7"/>
+                                            <outlet property="countryNameLbl" destination="UqR-Nw-NCM" id="7sC-po-cE7"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="MnU-8p-Enw" id="7dA-Ur-YXk"/>
+                                    <outlet property="delegate" destination="MnU-8p-Enw" id="Apg-5B-ryk"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Fpn-Og-70z" firstAttribute="trailing" secondItem="kOC-YZ-ate" secondAttribute="trailing" id="2kG-VJ-NNM"/>
+                            <constraint firstAttribute="bottom" secondItem="Fpn-Og-70z" secondAttribute="bottom" id="Dr9-SY-I5X"/>
+                            <constraint firstItem="Fpn-Og-70z" firstAttribute="leading" secondItem="kOC-YZ-ate" secondAttribute="leading" id="QVR-z2-T3G"/>
+                            <constraint firstItem="yuw-cV-dRx" firstAttribute="trailing" secondItem="kOC-YZ-ate" secondAttribute="trailing" id="RVW-X0-80V"/>
+                            <constraint firstItem="yuw-cV-dRx" firstAttribute="leading" secondItem="kOC-YZ-ate" secondAttribute="leading" id="ZAs-jD-Io2"/>
+                            <constraint firstItem="yuw-cV-dRx" firstAttribute="top" secondItem="B6Y-rM-mjv" secondAttribute="top" id="sgk-yn-dfB"/>
+                            <constraint firstItem="Fpn-Og-70z" firstAttribute="top" secondItem="yuw-cV-dRx" secondAttribute="bottom" id="wZC-OG-l3M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="B6Y-rM-mjv"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="27x-xy-jgR"/>
+                    <connections>
+                        <outlet property="CodeSearch" destination="yuw-cV-dRx" id="aJo-gI-yAM"/>
+                        <outlet property="CountryTabel" destination="Fpn-Og-70z" id="Fuz-Xy-6IP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zj5-TI-HHo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="671" y="115"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="7VF-Iq-Qy0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lhs-hb-qUF" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fN5-VG-Lna">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="MnU-8p-Enw" kind="relationship" relationship="rootViewController" id="Urb-nN-7qO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IYV-99-rAD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-55.200000000000003" y="114.53201970443351"/>
+        </scene>
+    </scenes>
+</document>
