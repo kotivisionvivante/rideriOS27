@@ -361,6 +361,9 @@
 		8B71A1DA23FE4FE400A8C81D /* OTPVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B71A1D923FE4FE400A8C81D /* OTPVerificationViewController.swift */; };
 		AD8267D224C9B8DD00B6301F /* Loader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD8267D124C9B8DD00B6301F /* Loader.storyboard */; };
 		AD8267D524C9B90A00B6301F /* LoaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD8267D424C9B90A00B6301F /* LoaderVC.swift */; };
+		EEE888A724F9399600C05579 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE888A424F9399500C05579 /* ScrollViewController.swift */; };
+		EEE888A824F9399600C05579 /* ScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEE888A524F9399500C05579 /* ScrollViewController.xib */; };
+		EEE888A924F9399600C05579 /* DriverDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEE888A624F9399500C05579 /* DriverDetailsVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -724,6 +727,9 @@
 		A72A62DF210035784B62D2DA /* Pods_TukTuk.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TukTuk.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD8267D124C9B8DD00B6301F /* Loader.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Loader.storyboard; sourceTree = "<group>"; };
 		AD8267D424C9B90A00B6301F /* LoaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderVC.swift; sourceTree = "<group>"; };
+		EEE888A424F9399500C05579 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ScrollViewController.swift; path = TukTuk/DriverDetails/ScrollViewController.swift; sourceTree = SOURCE_ROOT; };
+		EEE888A524F9399500C05579 /* ScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ScrollViewController.xib; path = TukTuk/DriverDetails/ScrollViewController.xib; sourceTree = SOURCE_ROOT; };
+		EEE888A624F9399500C05579 /* DriverDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DriverDetailsVC.swift; path = TukTuk/DriverDetails/DriverDetailsVC.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1343,6 +1349,7 @@
 		844C651F24040EE000A2AF54 /* Dashboard Screen */ = {
 			isa = PBXGroup;
 			children = (
+				EEE888A324F9396A00C05579 /* Driver Details */,
 				844C652024040EF300A2AF54 /* Dashboard.storyboard */,
 			);
 			path = "Dashboard Screen";
@@ -1616,6 +1623,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EEE888A324F9396A00C05579 /* Driver Details */ = {
+			isa = PBXGroup;
+			children = (
+				EEE888A624F9399500C05579 /* DriverDetailsVC.swift */,
+				EEE888A424F9399500C05579 /* ScrollViewController.swift */,
+				EEE888A524F9399500C05579 /* ScrollViewController.xib */,
+			);
+			path = "Driver Details";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1684,6 +1701,7 @@
 				84400B2C23FC007100263729 /* PW.png in Resources */,
 				84400B5B23FC007100263729 /* XK.png in Resources */,
 				84400AAA23FC007100263729 /* MT.png in Resources */,
+				EEE888A824F9399600C05579 /* ScrollViewController.xib in Resources */,
 				84400B0023FC007100263729 /* PR.png in Resources */,
 				84400A9323FC007100263729 /* YT.png in Resources */,
 				0417B51C24D18FEE004038CA /* NunitoSans-ExtraBoldItalic.ttf in Resources */,
@@ -2040,8 +2058,10 @@
 				84131DBD23FB6C6D00888275 /* TutorialSecondViewController.swift in Sources */,
 				6234A35324516B2A00DD34B3 /* BookRideCVC.swift in Sources */,
 				629118EB244ECD93009D8103 /* SetupLocationVCDelegateExt.swift in Sources */,
+				EEE888A924F9399600C05579 /* DriverDetailsVC.swift in Sources */,
 				6281F75B244D8CBA00353312 /* AddedPlacesM.swift in Sources */,
 				8B71A1DA23FE4FE400A8C81D /* OTPVerificationViewController.swift in Sources */,
+				EEE888A724F9399600C05579 /* ScrollViewController.swift in Sources */,
 				62210D15247275730015AC77 /* PaymentModel.swift in Sources */,
 				62DD59A5244991E500FADB77 /* HomeWorkCell.swift in Sources */,
 				62DD59AB2449B2CF00FADB77 /* SearchViewController.swift in Sources */,
