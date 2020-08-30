@@ -66,6 +66,15 @@ class DashboardViewController: UIViewController {
             isMapLoaded = !isMapLoaded
         }
     }
+    
+    
+    @IBOutlet weak var driverDetailsContainer: UIView!
+      
+      @IBAction func opendriverDetailsBTN(_ sender: UIButton) {
+          
+          self.view.bringSubviewToFront(driverDetailsContainer)
+      }
+    
 }
 
 //MARK:- Custom Methods
