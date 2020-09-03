@@ -71,8 +71,15 @@ class DashboardViewController: UIViewController {
     @IBOutlet weak var driverDetailsContainer: UIView!
       
       @IBAction func opendriverDetailsBTN(_ sender: UIButton) {
+        sender.isSelected = !sender.isSelected
+        if sender.isSelected {
+                self.view.sendSubviewToBack(driverDetailsContainer)
+             
+        }else {
+              self.view.bringSubviewToFront(driverDetailsContainer)
+           
+        }
           
-          self.view.bringSubviewToFront(driverDetailsContainer)
       }
     
 }

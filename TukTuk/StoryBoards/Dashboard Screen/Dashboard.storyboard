@@ -1340,7 +1340,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uVL-ge-SWk">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="50" width="414" height="686"/>
                                 <connections>
                                     <segue destination="Q8G-Cq-itf" kind="embed" id="rqR-3C-To6"/>
                                 </connections>
@@ -1492,7 +1492,7 @@
                             <constraint firstItem="uVL-ge-SWk" firstAttribute="trailing" secondItem="KKG-u6-oEh" secondAttribute="trailing" id="RF0-4m-IM8"/>
                             <constraint firstAttribute="bottom" secondItem="0in-Tj-WDZ" secondAttribute="bottom" constant="-210" id="Xrg-8i-GI0"/>
                             <constraint firstItem="Ozl-H7-MUW" firstAttribute="leading" secondItem="KKG-u6-oEh" secondAttribute="leading" constant="12" id="Yse-GE-hhi"/>
-                            <constraint firstItem="uVL-ge-SWk" firstAttribute="top" secondItem="KKG-u6-oEh" secondAttribute="top" id="avd-hb-hkM"/>
+                            <constraint firstItem="uVL-ge-SWk" firstAttribute="top" secondItem="KKG-u6-oEh" secondAttribute="top" constant="50" id="avd-hb-hkM"/>
                             <constraint firstItem="Ozl-H7-MUW" firstAttribute="top" secondItem="PbL-0a-2eJ" secondAttribute="bottom" constant="30" id="bll-AL-yWw"/>
                             <constraint firstAttribute="trailing" secondItem="0in-Tj-WDZ" secondAttribute="trailing" id="cQM-0s-91U"/>
                             <constraint firstAttribute="bottom" secondItem="Uxo-cE-aAq" secondAttribute="bottom" constant="-310" id="daY-zB-FHC"/>
@@ -1532,7 +1532,7 @@
             <objects>
                 <viewController storyboardIdentifier="DriverDetailsVC" id="Q8G-Cq-itf" customClass="DriverDetailsVC" customModule="TukTuk" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u9c-HI-lZB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="686"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bZn-64-sZi"/>

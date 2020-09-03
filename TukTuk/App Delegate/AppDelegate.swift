@@ -10,10 +10,12 @@ import IQKeyboardManagerSwift
 import Firebase
 import FirebaseInstanceID
 import FirebaseMessaging
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-    
+        let gcmMessageIDKey = "gcm.Message_id"
+        var nofificationData = [AnyHashable: Any]()
     var window: UIWindow?
 
     private var mlocationManager: CLLocationManager = {
@@ -35,6 +37,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         IQKeyboardManager.shared.enable = true
         GMSServices.provideAPIKey(GOOGLEAPIKEY)
         GMSPlacesClient.provideAPIKey(GOOGLEAPIKEY)
+        
+        if let launchOptions = launchOptions,
+            let userInfo = launchOptions[.remoteNotification] as? [AnyHashable: Any]
+        {
+            // App was launched through a notification, execute some code here...
+            Logger.log(message: "didFinishLaunchingWithOptions:\(userInfo)")
+            nofificationData = userInfo
+        }
+        
+        
         return true
     }
     
@@ -56,11 +68,81 @@ extension AppDelegate: UNUserNotificationCenterDelegate,MessagingDelegate{
     func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
 
         
+        let userInfo = response.notification.request.content.userInfo
+         // Print message ID.
+         if let messageID = userInfo[gcmMessageIDKey] {
+           print("Message ID: \(messageID)")
+         }
+
+         // With swizzling disabled you must let Messaging know about the message, for Analytics
+         // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+         // Print full message.
+         print("from didReceive response",userInfo)
+ 
+         completionHandler()
+        
     }
     
     func userNotificationCenter(_ center: UNUserNotificationCenter, willPresent notification: UNNotification, withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        let userInfo = notification.request.content.userInfo
 
+        // With swizzling disabled you must let Messaging know about the message, for Analytics
+        // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+        // Print message ID.
+        if let messageID = userInfo[gcmMessageIDKey] {
+          print("Message ID: \(messageID)")
+        }
+
+        // Print full message.
+        print("from Will Present##",userInfo)
+         print("from Will Presentttttttttttttttttttttttttt")
+
+        // Change this to your preferred presentation option
+        completionHandler([[.alert, .sound, .badge]])
+        
     }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any]) {
+      // If you are receiving a notification message while your app is in the background,
+      // this callback will not be fired till the user taps on the notification launching the application.
+      // TODO: Handle data of notification
+
+      // With swizzling disabled you must let Messaging know about the message, for Analytics
+      // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+      // Print message ID.
+      if let messageID = userInfo["gcmMessageIDKey"] {
+        print("Message ID: \(messageID)")
+      }
+
+      // Print full message.
+      print("didReceiveRemoteNotification##",userInfo)
+    }
+    
+    func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable: Any],
+                     fetchCompletionHandler completionHandler: @escaping (UIBackgroundFetchResult) -> Void) {
+      // If you are receiving a notification message while your app is in the background,
+      // this callback will not be fired till the user taps on the notification launching the application.
+      // TODO: Handle data of notification
+
+      // With swizzling disabled you must let Messaging know about the message, for Analytics
+      // Messaging.messaging().appDidReceiveMessage(userInfo)
+
+      // Print message ID.
+      if let messageID = userInfo["gcmMessageIDKey"] {
+        print("Message ID: \(messageID)")
+      }
+
+      // Print full message.
+      print("didReceiveRemoteNotification##@esc",userInfo)
+
+      completionHandler(UIBackgroundFetchResult.newData)
+    }
+
+    
 }
 
 //MARK:- Register Push Notification
@@ -163,4 +245,16 @@ extension UIApplication {
         }
         return base
     }
+}
+
+
+class Logger {
+    
+    static func log(message: Any?) {
+        #if DEBUG
+        guard let message = message else {return}
+        print("DKLogger Printing: \(message)")
+        #endif
+    }
+    
 }
